@@ -39,7 +39,7 @@ class MainHandler(webapp2.RequestHandler):
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=10"
         search_term = self.request.get('bdName')
-        if not bdName:
+        if bdName:
             search_term = self.request.get('bdName', 'bdAge')
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
