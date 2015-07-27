@@ -15,6 +15,11 @@ h2 {
   font-family: 'Covered By Your Grace', cursive;
 }
 
+.nav:hover{
+  cursor: pointer;
+  font-size: 40px;
+}
+
 /** #first {
   font-size: 30px;
   background-color: rgba(255,255,255,0.6);
