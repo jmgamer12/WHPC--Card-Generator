@@ -83,4 +83,20 @@ $(function(){
     $("#frand").slideDown();
     $("#Home").slideDown();
   });
+
+  //go Home
+  $("#Home").click(function(){
+    $("#fbirthd").slideUp();
+    $("#fanni").slideUp();
+    $("#fgwell").slideUp();
+    $("#fcongra").slideUp();
+    $("#fgrad").slideUp();
+    $("#fbirth").slideUp();
+    $("#fxmas").slideUp();
+    $("#fvalin").slideUp();
+    $("#fholi").slideUp();
+    $("#frand").slideUp();
+    $("#Home").hide();
+    $("#first").slideDown();
+  });
 });

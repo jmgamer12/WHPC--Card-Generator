@@ -202,6 +202,11 @@ h2 {
   font-size: 27px;
 }
 
+#Home:hover{
+  cursor: pointer;
+  font-size: 40px;
+}
+
 table {
   text-align: center;
   border-top: 100px;
