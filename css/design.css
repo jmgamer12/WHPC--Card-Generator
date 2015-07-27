@@ -7,7 +7,12 @@ html {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 70px;
+  font-family: 'Monoton', cursive;
+}
+
+h2 {
+  font-family: 'Covered By Your Grace', cursive;
 }
 
 /** #first {
@@ -36,9 +41,10 @@ h1 {
   line-height: 1.2cm;
 } **/
 
-#birthd {
+/** #birthd {
   font-size: 30px;
   background-color: rgba(255,255,255,0.6);
+  padding-top: 40px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 35px;
@@ -47,11 +53,13 @@ h1 {
   left: 300px;
   top: 300px;
   line-height: 1.2cm;
+  font-family: 'Ribeye Marrow', cursive;
 }
 
 #anni {
   font-size: 30px;
   background-color: rgba(255,255,255,0.6);
+  padding-top: 40px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 35px;
@@ -65,6 +73,7 @@ h1 {
 #gwell {
   font-size: 30px;
   background-color: rgba(255,255,255,0.6);
+  padding-top: 40px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 35px;
@@ -78,6 +87,7 @@ h1 {
 #congra {
   font-size: 30px;
   background-color: rgba(255,255,255,0.6);
+  padding-top: 40px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 35px;
@@ -91,6 +101,7 @@ h1 {
 #birth {
   font-size: 30px;
   background-color: rgba(255,255,255,0.6);
+  padding-top: 40px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 35px;
@@ -104,10 +115,11 @@ h1 {
 #xmas {
   font-size: 30px;
   background-color: rgba(255,255,255,0.6);
+  padding-top: 40px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 35px;
-  border-radius: 50px;
+  border-radius: 100px;
   position: absolute;
   right: 300px;
   top: 300px;
@@ -117,10 +129,11 @@ h1 {
 #valin {
   font-size: 30px;
   background-color: rgba(255,255,255,0.6);
+  padding-top: 40px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 35px;
-  border-radius: 50px;
+  border-radius: 100px;
   position: absolute;
   right: 300px;
   top: 500px;
@@ -130,10 +143,11 @@ h1 {
 #grad {
   font-size: 30px;
   background-color: rgba(255,255,255,0.6);
+  padding-top: 40px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 35px;
-  border-radius: 50px;
+  border-radius: 100px;
   position: absolute;
   right: 300px;
   top: 700px;
@@ -143,10 +157,11 @@ h1 {
 #holi {
   font-size: 30px;
   background-color: rgba(255,255,255,0.6);
+  padding-top: 40px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 35px;
-  border-radius: 50px;
+  border-radius: 100px;
   position: absolute;
   right: 300px;
   top: 900px;
@@ -156,12 +171,29 @@ h1 {
 #rand {
   font-size: 30px;
   background-color: rgba(255,255,255,0.6);
+  padding-top: 40px;
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 35px;
-  border-radius: 50px;
+  border-radius: 100px;
   position: absolute;
   right: 300px;
   top: 1100px;
+  bottom: 100px
   line-height: 1.2cm;
+} **/
+
+table {
+  text-align: center;
+  border-top: 100px;
+}
+
+td {
+  font-size: 25px;
+  border-radius: 300px;
+  background-color: rgba(255,255,255,0.6);
+  padding: 70px;
+  border-collapse: separate;
+  height: 70px;
+  font-family: 'Just Me Again Down Here', cursive;
 }

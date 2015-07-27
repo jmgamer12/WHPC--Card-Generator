@@ -3,26 +3,33 @@
   <head>
     <title> Arbitrary Card Generator </title>
       <link rel="stylesheet" type="text/css" href="css/design.css">
+      <link href='http://fonts.googleapis.com/css?family=Covered+By+Your+Grace' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here' rel='stylesheet' type='text/css'>
   </head>
   <body>
   <center><h1> The A.C.G. </h1></center>
   <center><h2> For all your arbitrary card generating needs. </h2></center>
-  <div id="first">
-    <br> <div id="birthd"> Birthday </div>
-    <br> <div id="anni"> Anniversary </div>
-    <br> <div id="gwell"> Get Well... </div>
-    <br> <div id="congra"> Congrats! </div>
-    <br> <div id="birth"> Birth </div>
-  </div>
-
-  <div id="second">
-    <br> <div id="xmas"> Christmas </div>
-    <br> <div id="valin"> Valentines </div>
-    <br> <div id="grad"> Graduation </div>
-    <br> <div id="holi"> Holidays </div>
-    <br> <div id="rand"> (random) </div>
-  </div>
-
+  <center>
+  <table id="first">
+    <tr>
+      <td> <div id="birthd"> Birthday </div> </td>
+      <td> <div id="anni"> Anniversary </div> </td>
+      <td> <div id="gwell"> Get Well... </div> </td>
+      <td> <div id="congra"> Congrats! </div> </td>
+      <td> <div id="birth">  Birth  </div> </td>
+    </tr>
+    <tr>
+      <td> <div id="xmas"> Christmas </div> </td>
+      <td> <div id="valin"> Valentines </div> </td>
+      <td> <div id="grad"> Graduation </div> </td>
+      <td> <div id="holi"> Holidays </div> </td>
+      <td> <div id="rand"> (random) </div> </td>
+      <br>
+    </tr>
+  </table>
+</center>
+  <center>
   <div id='fbirthd'>
     <p>Name(s) of Recipeinent(s):</p><input name="bdName"><br>
     <p>Age:</p><input name="bdAge"><br>
@@ -78,6 +85,7 @@
     <p>Name(s) of Recipeinent(s):</p><input name="randName"><br>
     <p>Your Name(s):</p><input name="randYName"><br>
   </div>
+  </center>
 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <script src="js/letters.js"></script>

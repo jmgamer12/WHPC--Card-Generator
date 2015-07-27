@@ -14,151 +14,61 @@ $("#frand").slideUp();
 $(function(){
   //open birthday
   $("#birthd").click(function(){
-    $("#birthd").slideUp();
-    $("#anni").slideUp();
-    $("#gwell").slideUp();
-    $("#congra").slideUp();
-    $("#grad").slideUp();
-    $("#birth").slideUp();
-    $("#xmas").slideUp();
-    $("#valin").slideUp();
-    $("#holi").slideUp();
-    $("#rand").slideUp();
+    $("#first").slideUp();
     $("#fbirthd").slideDown();
 	});
 
   //open anniversary
   $("#anni").click(function(){
-    $("#birthd").slideUp();
-    $("#anni").slideUp();
-    $("#gwell").slideUp();
-    $("#congra").slideUp();
-    $("#grad").slideUp();
-    $("#birth").slideUp();
-    $("#xmas").slideUp();
-    $("#valin").slideUp();
-    $("#holi").slideUp();
-    $("#rand").slideUp();
+    $("#first").slideUp();
     $("#fanni").slideDown();
   });
 
   //open get well
   $("#gwell").click(function(){
-    $("#birthd").slideUp();
-    $("#anni").slideUp();
-    $("#gwell").slideUp();
-    $("#congra").slideUp();
-    $("#grad").slideUp();
-    $("#birth").slideUp();
-    $("#xmas").slideUp();
-    $("#valin").slideUp();
-    $("#holi").slideUp();
-    $("#rand").slideUp();
+    $("#first").slideUp();
     $("#fgwell").slideDown();
   });
 
   //open congradulations
   $("#congra").click(function(){
-    $("#birthd").slideUp();
-    $("#anni").slideUp();
-    $("#gwell").slideUp();
-    $("#congra").slideUp();
-    $("#grad").slideUp();
-    $("#birth").slideUp();
-    $("#xmas").slideUp();
-    $("#valin").slideUp();
-    $("#holi").slideUp();
-    $("#rand").slideUp();
+    $("#first").slideUp();
     $("#fcongra").slideDown();
   });
 
   //open graduation
   $("#grad").click(function(){
-    $("#birthd").slideUp();
-    $("#anni").slideUp();
-    $("#gwell").slideUp();
-    $("#congra").slideUp();
-    $("#grad").slideUp();
-    $("#birth").slideUp();
-    $("#xmas").slideUp();
-    $("#valin").slideUp();
-    $("#holi").slideUp();
-    $("#rand").slideUp();
+    $("#first").slideUp();
     $("#fgrad").slideDown();
   });
 
   //open birth
   $("#birth").click(function(){
-    $("#birthd").slideUp();
-    $("#anni").slideUp();
-    $("#gwell").slideUp();
-    $("#congra").slideUp();
-    $("#grad").slideUp();
-    $("#birth").slideUp();
-    $("#xmas").slideUp();
-    $("#valin").slideUp();
-    $("#holi").slideUp();
-    $("#rand").slideUp();
+    $("#first").slideUp();
     $("#fbirth").slideDown();
   });
 
   //open christmas
   $("#xmas").click(function(){
-    $("#birthd").slideUp();
-    $("#anni").slideUp();
-    $("#gwell").slideUp();
-    $("#congra").slideUp();
-    $("#grad").slideUp();
-    $("#birth").slideUp();
-    $("#xmas").slideUp();
-    $("#valin").slideUp();
-    $("#holi").slideUp();
-    $("#rand").slideUp();
+    $("#first").slideUp();
     $("#fxmas").slideDown();
   });
 
   //open valintines
   $("#valin").click(function(){
-    $("#birthd").slideUp();
-    $("#anni").slideUp();
-    $("#gwell").slideUp();
-    $("#congra").slideUp();
-    $("#grad").slideUp();
-    $("#birth").slideUp();
-    $("#xmas").slideUp();
-    $("#valin").slideUp();
-    $("#holi").slideUp();
-    $("#rand").slideUp();
+    $("#first").slideUp();
     $("#fvalin").slideDown();
   });
 
   //open holidays
   $("#holi").click(function(){
-    $("#birthd").slideUp();
-    $("#anni").slideUp();
-    $("#gwell").slideUp();
-    $("#congra").slideUp();
-    $("#grad").slideUp();
-    $("#birth").slideUp();
-    $("#xmas").slideUp();
-    $("#valin").slideUp();
-    $("#holi").slideUp();
-    $("#rand").slideUp();
+    $("#first").slideUp();
     $("#fholi").slideDown();
   });
 
   //open random
   $("#rand").click(function(){
-    $("#birthd").slideUp();
-    $("#anni").slideUp();
-    $("#gwell").slideUp();
-    $("#congra").slideUp();
-    $("#grad").slideUp();
-    $("#birth").slideUp();
-    $("#xmas").slideUp();
-    $("#valin").slideUp();
-    $("#holi").slideUp();
-    $("#rand").slideUp();
+    $("#first").slideUp();
     $("#frand").slideDown();
   });
 });
