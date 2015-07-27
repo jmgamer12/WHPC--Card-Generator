@@ -8,6 +8,22 @@ $("#fxmas").slideUp();
 $("#fvalin").slideUp();
 $("#fholi").slideUp();
 $("#frand").slideUp();
+$("#Home").slideUp();
+
+$(function(){
+  $("Home").click(function(){
+    $("#birthd").slideUp();
+    $("#anni").slideUp();
+    $("#gwell").slideUp();
+    $("#congra").slideUp();
+    $("#grad").slideUp();
+    $("#birth").slideUp();
+    $("#xmas").slideUp();
+    $("#valin").slideUp();
+    $("#holi").slideUp();
+    $("#rand").slideUp();
+  })
+})
 
 
 

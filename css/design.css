@@ -183,6 +183,20 @@ h2 {
   line-height: 1.2cm;
 } **/
 
+#Home {
+  border-radius: 70%;
+  background-color: rgba(255,255,255,0.6);
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 70px;
+  height: 10px;
+  width: 40px;
+  text-align: center;
+  font-family: 'Just Me Again Down Here', cursive;
+  font-size: 27px;
+}
+
 table {
   text-align: center;
   border-top: 100px;
@@ -196,4 +210,8 @@ td {
   border-collapse: separate;
   height: 70px;
   font-family: 'Just Me Again Down Here', cursive;
+}
+
+#Input {
+  font-family: 'Coming Soon', cursive;
 }
