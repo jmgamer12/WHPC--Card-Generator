@@ -9,6 +9,8 @@ $("#fvalin").hide();
 $("#fholi").hide();
 $("#frand").hide();
 $("#Home").hide();
+$("#submit").hide();
+
 
 
 
@@ -19,6 +21,7 @@ $(function(){
     $("#first").slideUp();
     $("#fbirthd").slideDown();
     $("#Home").slideDown();
+    $("#submit").slideDown();
 	});
 
   //open anniversary
@@ -26,6 +29,7 @@ $(function(){
     $("#first").slideUp();
     $("#fanni").slideDown();
     $("#Home").slideDown();
+    $("#submit").slideDown();
   });
 
   //open get well
@@ -33,6 +37,7 @@ $(function(){
     $("#first").slideUp();
     $("#fgwell").slideDown();
     $("#Home").slideDown();
+    $("#submit").slideDown();
   });
 
   //open congradulations
@@ -40,6 +45,7 @@ $(function(){
     $("#first").slideUp();
     $("#fcongra").slideDown();
     $("#Home").slideDown();
+    $("#submit").slideDown();
   });
 
   //open graduation
@@ -47,6 +53,7 @@ $(function(){
     $("#first").slideUp();
     $("#fgrad").slideDown();
     $("#Home").slideDown();
+    $("#submit").slideDown();
   });
 
   //open birth
@@ -54,6 +61,7 @@ $(function(){
     $("#first").slideUp();
     $("#fbirth").slideDown();
     $("#Home").slideDown();
+    $("#submit").slideDown();
   });
 
   //open christmas
@@ -61,6 +69,7 @@ $(function(){
     $("#first").slideUp();
     $("#fxmas").slideDown();
     $("#Home").slideDown();
+    $("#submit").slideDown();
   });
 
   //open valintines
@@ -68,6 +77,7 @@ $(function(){
     $("#first").slideUp();
     $("#fvalin").slideDown();
     $("#Home").slideDown();
+    $("#submit").slideDown();
   });
 
   //open holidays
@@ -75,6 +85,7 @@ $(function(){
     $("#first").slideUp();
     $("#fholi").slideDown();
     $("#Home").slideDown();
+    $("#submit").slideDown();
   });
 
   //open random
@@ -82,6 +93,7 @@ $(function(){
     $("#first").slideUp();
     $("#frand").slideDown();
     $("#Home").slideDown();
+    $("#submit").slideDown();
   });
 
   //go Home
@@ -98,5 +110,6 @@ $(function(){
     $("#frand").slideUp();
     $("#Home").hide();
     $("#first").slideDown();
+    $("#submit").hide();
   });
 });
