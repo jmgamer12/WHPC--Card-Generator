@@ -1,13 +1,13 @@
-$("#fbirthd").slideUp();
-$("#fanni").slideUp();
-$("#fgwell").slideUp();
-$("#fcongra").slideUp();
-$("#fgrad").slideUp();
-$("#fbirth").slideUp();
-$("#fxmas").slideUp();
-$("#fvalin").slideUp();
-$("#fholi").slideUp();
-$("#frand").slideUp();
+$("#fbirthd").hide();
+$("#fanni").hide();
+$("#fgwell").hide();
+$("#fcongra").hide();
+$("#fgrad").hide();
+$("#fbirth").hide();
+$("#fxmas").hide();
+$("#fvalin").hide();
+$("#fholi").hide();
+$("#frand").hide();
 $("#Home").hide();
 
 
