@@ -315,11 +315,11 @@ class HolidaysHandler(webapp2.RequestHandler):
             holiType = self.request.get('holiType')
             holiYName = self.request.get('holiYName')
             #creation of the random text
-<<<<<<< HEAD
+
             textRand = random.randint(1, 3)
-=======
+
             textRand = random.randint(1, 2)
->>>>>>> a9e91b20cf1cc20ed60a697bbdee9fd8ff38d155
+
             if textRand == 1:
                 self.response.write('Dear ' + holiName + ",<br>Happy" + holiType + "! Enjoy the holidays while they last!<br>" + holiYName)
                 self.response.write('''<html><body><br></body></html>''')
@@ -352,11 +352,11 @@ class RandomHandler(webapp2.RequestHandler):
             search_term = "random"
             randYName = self.request.get('randYName')
             #creation of the random text
-<<<<<<< HEAD
+
             textRand = random.randint(1, 3)
-=======
+
             textRand = random.randint(1, 2)
->>>>>>> a9e91b20cf1cc20ed60a697bbdee9fd8ff38d155
+
             if textRand == 1:
                 self.response.write(randName + ",<br>Dude I'm not exactly sure why I am sending a card, but I do know you're important enough to get one!<br>" + randYName)
                 self.response.write('''<html><body><br></body></html>''')
