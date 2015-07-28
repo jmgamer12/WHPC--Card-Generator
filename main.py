@@ -43,7 +43,9 @@ class MainHandler(webapp2.RequestHandler):
             search_term = "birthday"
             bdAge = self.request.get('bdAge')
             bdYName = self.request.get('bdYName')
+
             # Make emptty variables for quotes within handlers about here
+
             quote = None
             quote1 = None
             #creation of the random text
@@ -58,10 +60,10 @@ class MainHandler(webapp2.RequestHandler):
             parsed_giphy_dictionary = json.loads(giphy_json_content)
             x = len(parsed_giphy_dictionary['data'])
             gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
-            self.response.write(template.render({'gif_url': gif_url}))
+            self.response.write(template.render({'bdName': bdName, 'bdAge': bdAge, 'bdYName': bdYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write("To Who?")
-            self.response.write('''<html><body><img src="css/owl.jpg"></img></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+
 
 
 class AnniHandler(webapp2.RequestHandler):
@@ -73,6 +75,9 @@ class AnniHandler(webapp2.RequestHandler):
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
         anniName = self.request.get('anniName')
+        # Make empty variables for quotes within handlers about here
+        quote = None
+        quote1 = None
         if anniName:
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "anniversary"
@@ -93,10 +98,10 @@ class AnniHandler(webapp2.RequestHandler):
             parsed_giphy_dictionary = json.loads(giphy_json_content)
             x = len(parsed_giphy_dictionary['data'])
             gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
-            self.response.write(template.render({'gif_url': gif_url}))
+            self.response.write(template.render({'anniYears': anniYears, 'anniName': anniName, 'anniYName': anniYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write("To Who?")
-            self.response.write('''<html><body><img src="css/owl.jpg"></img></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+
 
 class BirthHandler(webapp2.RequestHandler):
     def get(self):
@@ -109,7 +114,7 @@ class BirthHandler(webapp2.RequestHandler):
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
         search_term = "baby"
-        # Make emptty variables for quotes within handlers about here
+        # Make empty variables for quotes within handlers about here
         quote = None
         quote1 = None
         if birthName:
@@ -129,10 +134,10 @@ class BirthHandler(webapp2.RequestHandler):
             x = len(parsed_giphy_dictionary['data'])
             gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
             # Add all variables to dictionary here. Also take a look at birth-card.html for more hep
-            self.response.write(template.render({'quote1': quote1, 'birthYName': birthYName, 'quote': quote,'gif_url': gif_url}))
+            self.response.write(template.render({'birthName': birthName, 'quote1': quote1, 'birthYName': birthYName, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write("To Who?")
-            self.response.write('''<html><body><img src="css/owl.jpg"></img></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+
 
 class ConHandler(webapp2.RequestHandler):
     def get(self):
@@ -144,6 +149,9 @@ class ConHandler(webapp2.RequestHandler):
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
         search_term = self.request.get('conName')
+        # Make empty variables for quotes within handlers about here
+        quote = None
+        quote1 = None
         if conName:
             search_term = self.request.get('conCongra')
             #search_term = "congradulations"
@@ -164,10 +172,10 @@ class ConHandler(webapp2.RequestHandler):
             parsed_giphy_dictionary = json.loads(giphy_json_content)
             x = len(parsed_giphy_dictionary['data'])
             gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
-            self.response.write(template.render({'gif_url': gif_url}))
+            self.response.write(template.render({'conName': conName, 'conCongra': conCongra, 'conYName': conYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write("To Who?")
-            self.response.write('''<html><body><img src="css/owl.jpg"></img></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+
 
 class WellHandler(webapp2.RequestHandler):
     def get(self):
@@ -179,6 +187,9 @@ class WellHandler(webapp2.RequestHandler):
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
         search_term = self.request.get('gwName')
+        # Make empty variables for quotes within handlers about here
+        quote = None
+        quote1 = None
         if gwName:
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "sick"
@@ -198,10 +209,10 @@ class WellHandler(webapp2.RequestHandler):
             parsed_giphy_dictionary = json.loads(giphy_json_content)
             x = len(parsed_giphy_dictionary['data'])
             gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
-            self.response.write(template.render({'gif_url': gif_url}))
+            self.response.write(template.render({'gwName': gwName, 'gwYName': gwYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write("To Who?")
-            self.response.write('''<html><body><img src="css/owl.jpg"></img></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+
 class GradHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('templates/mainpage.html')
@@ -212,6 +223,9 @@ class GradHandler(webapp2.RequestHandler):
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
         search_term = self.request.get('gradName')
+        # Make empty variables for quotes within handlers about here
+        quote = None
+        quote1 = None
         if gradName:
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "graduation"
@@ -232,10 +246,10 @@ class GradHandler(webapp2.RequestHandler):
             parsed_giphy_dictionary = json.loads(giphy_json_content)
             x = len(parsed_giphy_dictionary['data'])
             gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
-            self.response.write(template.render({'gif_url': gif_url}))
+            self.response.write(template.render({'gradName': gradName, 'gradYName': gradYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write("To Who?")
-            self.response.write('''<html><body><img src="css/owl.jpg"></img></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+
 
 class XmasHandler(webapp2.RequestHandler):
     def get(self):
@@ -247,6 +261,9 @@ class XmasHandler(webapp2.RequestHandler):
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
         search_term = self.request.get('xmasName')
+        # Make empty variables for quotes within handlers about here
+        quote = None
+        quote1 = None
         if xmasName:
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "chistmas"
@@ -266,10 +283,10 @@ class XmasHandler(webapp2.RequestHandler):
             parsed_giphy_dictionary = json.loads(giphy_json_content)
             x = len(parsed_giphy_dictionary['data'])
             gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
-            self.response.write(template.render({'gif_url': gif_url}))
+            self.response.write(template.render({'xmasName': xmasName, 'xmasYName': xmasYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write("To Who?")
-            self.response.write('''<html><body><img src="css/owl.jpg"></img></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+
 class ValinHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('templates/mainpage.html')
@@ -280,6 +297,10 @@ class ValinHandler(webapp2.RequestHandler):
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
         search_term = self.request.get('valinName')
+        # Make empty variables for quotes within handlers about here
+        quote = None
+        quote1 = None
+        quote2 = None
         if valinName:
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "love"
@@ -301,10 +322,10 @@ class ValinHandler(webapp2.RequestHandler):
             parsed_giphy_dictionary = json.loads(giphy_json_content)
             x = len(parsed_giphy_dictionary['data'])
             gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
-            self.response.write(template.render({'gif_url': gif_url}))
+            self.response.write(template.render({'valinYName': valinYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write("To Who?")
-            self.response.write('''<html><body><img src="css/owl.jpg"></img></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+
 class HolidaysHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template('templates/mainpage.html')
@@ -315,6 +336,9 @@ class HolidaysHandler(webapp2.RequestHandler):
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
         search_term = self.request.get('holiName')
+        # Make empty variables for quotes within handlers about here
+        quote = None
+        quote1 = None
         if holiName:
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "party"
@@ -336,17 +360,17 @@ class HolidaysHandler(webapp2.RequestHandler):
             if textRand == 1:
                 quote = 'Dear ' + holiName + ",<br>Happy" + holiType + "! Enjoy the holidays while they last!<br>" + holiYName
             elif textRand == 2:
-                quote1 = holiName + ",<br>May you have a happy" + holiType + "!<br> " + valinYName
+                quote1 = holiName + ",<br>May you have a happy" + holiType + "!<br> " + holiYName
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
             giphy_json_content = giphy_data_source.content
             parsed_giphy_dictionary = json.loads(giphy_json_content)
             x = len(parsed_giphy_dictionary['data'])
             gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
-            self.response.write(template.render({'gif_url': gif_url}))
+            self.response.write(template.render({'holiName': holiName, 'holiType': holiType, 'holiYName': holiYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write("To Who?")
-            self.response.write('''<html><body><img src="css/owl.jpg"></img></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+
 
 class RandomHandler(webapp2.RequestHandler):
     def get(self):
@@ -358,6 +382,9 @@ class RandomHandler(webapp2.RequestHandler):
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
         search_term = self.request.get('randName')
+        # Make empty variables for quotes within handlers about here
+        quote = None
+        quote1 = None
         if randName:
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "random"
@@ -385,7 +412,7 @@ class RandomHandler(webapp2.RequestHandler):
             parsed_giphy_dictionary = json.loads(giphy_json_content)
             x = len(parsed_giphy_dictionary['data'])
             gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
-            self.response.write(template.render({'gif_url': gif_url}))
+            self.response.write(template.render({'randName': randName, 'randYName': randYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
             self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
 
