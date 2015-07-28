@@ -191,10 +191,10 @@ h2 {
 #Home {
   border-radius: 70%;
   background-color: rgba(255,255,255,0.6);
-  padding-top: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-bottom: 70px;
+  padding-top: 35px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 65px;
   height: 10px;
   width: 40px;
   text-align: center;
@@ -204,7 +204,7 @@ h2 {
 
 #Home:hover{
   cursor: pointer;
-  font-size: 40px;
+  font-size: 25px;
 }
 
 table {

@@ -383,8 +383,19 @@ class RandomHandler(webapp2.RequestHandler):
             gif_url = parsed_giphy_dictionary['data'][random.randint(0,5)]['images']['original']['url']
             self.response.write(template.render({'gif_url': gif_url}))
         else:
-            self.response.write("To Who?")
-            self.response.write('''<html><body><img src="css/owl.jpg"></img></body></html>''')
+            self.response.write('''
+<html>
+    <body>
+        <center>
+        <br>
+        <p> To Who? </p>
+        <br>
+        <img src="css/owl.jpg"> </img>
+        <center>
+        <br>
+    </body>
+</html>
+''')
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
