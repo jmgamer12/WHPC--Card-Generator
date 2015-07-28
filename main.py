@@ -21,6 +21,7 @@ from google.appengine.api import urlfetch
 import random
 import urllib
 import json
+import logging
 
 jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
@@ -54,11 +55,20 @@ class MainHandler(webapp2.RequestHandler):
             search_term = "birthday"
             bdAge = self.request.get('bdAge')
             bdYName = self.request.get('bdYName')
+            #creation of the random text
+            textRand = random.randint(1, 2)
+            if textRand == 1:
+                self.response.write('Happy Birthday ' + bdName + ", <br>I can't believe you're " + bdAge + '! <br>' + bdYName)
+                self.response.write('''<html><body><br></body></html>''')
+            elif textRand == 2:
+                self.response.write(bdName + ",<br>Hey dude happy " + bdAge + ' Birthday! <br>' + bdYName)
+                self.response.write('''<html><body><br></body></html>''')
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
             giphy_json_content = giphy_data_source.content
             parsed_giphy_dictionary = json.loads(giphy_json_content)
-            gif_url = parsed_giphy_dictionary['data'][random.randint(0,5)]['images']['original']['url']
+            x = len(parsed_giphy_dictionary['data'])
+            gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
             self.response.write(template.render({'gif_url': gif_url}))
 
         # elif anniName:
@@ -183,11 +193,20 @@ class AnniHandler(webapp2.RequestHandler):
             search_term = "anniversary"
             anniYears = self.request.get('anniYears')
             anniYName = self.request.get('anniYName')
+            #creation of the random text
+            textRand = random.randint(1, 2)
+            if textRand == 1:
+                self.response.write('Happy ' + anniYears + ", anniversary! I'm so happy for you, " + anniName + ' and hope you can celebrate many more! <br>' + anniYName)
+                self.response.write('''<html><body><br></body></html>''')
+            elif textRand == 2:
+                self.response.write(anniName + ", <br>Congradulations on your " + anniYears + ' anniversary! <br>' + anniYName)
+                self.response.write('''<html><body><br></body></html>''')
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
             giphy_json_content = giphy_data_source.content
             parsed_giphy_dictionary = json.loads(giphy_json_content)
-            gif_url = parsed_giphy_dictionary['data'][random.randint(0,5)]['images']['original']['url']
+            x = len(parsed_giphy_dictionary['data'])
+            gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
             self.response.write(template.render({'gif_url': gif_url}))
         else:
             self.response.write("To Who?")
@@ -204,15 +223,20 @@ class BirthHandler(webapp2.RequestHandler):
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
         search_term = self.request.get('birthName')
         if birthName:
-            #search_term = self.request.get('bdName', 'bdAge')
-            search_term = "birth"
-            birthGender = self.request.get('birthGender')
-            birthYName = self.request.get('birthYName')
+            #creation of the random text
+            textRand = random.randint(1, 2)
+            if textRand == 1:
+                self.response.write(birthName + ", <br>Apperently you gave birth...<br>Enjoy the barf and diapers life!<br>" + birthYName)
+                self.response.write('''<html><body><br></body></html>''')
+            elif textRand == 2:
+                self.response.write(birthName + ",<br>Congrats on your new baby! Remember babies don't become cool till they become teenagers.<br>With love,<br>" + birthYName)
+                self.response.write('''<html><body><br></body></html>''')
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
             giphy_json_content = giphy_data_source.content
             parsed_giphy_dictionary = json.loads(giphy_json_content)
-            gif_url = parsed_giphy_dictionary['data'][random.randint(0,5)]['images']['original']['url']
+            x = len(parsed_giphy_dictionary['data'])
+            gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
             self.response.write(template.render({'gif_url': gif_url}))
         else:
             self.response.write("To Who?")
@@ -229,15 +253,24 @@ class ConHandler(webapp2.RequestHandler):
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
         search_term = self.request.get('conName')
         if conName:
-            #search_term = self.request.get('bdName', 'bdAge')
-            search_term = "congradulations"
+            search_term = self.request.get('conCongra')
+            #search_term = "congradulations"
             conCongra = self.request.get('conCongra')
             conYName = self.request.get('conYName')
+            #creation of the random text
+            textRand = random.randint(1, 2)
+            if textRand == 1:
+                self.response.write('Congradulations ' + conName + ", <br>Everyone is so proud of your " + conCongra + '! <br>Keep up the good work, <br>' + conYName)
+                self.response.write('''<html><body><br></body></html>''')
+            elif textRand == 2:
+                self.response.write(conName + ", <br>Congradulations on " + conCongra + "! I'm so proud of you, <br>" + conYName)
+                self.response.write('''<html><body><br></body></html>''')
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
             giphy_json_content = giphy_data_source.content
             parsed_giphy_dictionary = json.loads(giphy_json_content)
-            gif_url = parsed_giphy_dictionary['data'][random.randint(0,5)]['images']['original']['url']
+            x = len(parsed_giphy_dictionary['data'])
+            gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
             self.response.write(template.render({'gif_url': gif_url}))
         else:
             self.response.write("To Who?")
@@ -255,13 +288,22 @@ class WellHandler(webapp2.RequestHandler):
         search_term = self.request.get('gwName')
         if gwName:
             #search_term = self.request.get('bdName', 'bdAge')
-            search_term = "get well"
-            bdName = self.request.get('gwYName')
+            search_term = "sick"
+            gwYName = self.request.get('gwYName')
+            #creation of the random text
+            textRand = random.randint(1, 2)
+            if textRand == 1:
+                self.response.write('Dear ' + gwName + ", <br>I know it feels suck-y right now, but it will get better, really.<br>Hope you get well soon:<br>" + gwYName)
+                self.response.write('''<html><body><br></body></html>''')
+            elif textRand == 2:
+                self.response.write(gwName + ", <br>Being sick sucks, but you get lots of free stuff like this card!<br>Get better soon!<br>" + gwYName)
+                self.response.write('''<html><body><br></body></html>''')
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
             giphy_json_content = giphy_data_source.content
             parsed_giphy_dictionary = json.loads(giphy_json_content)
-            gif_url = parsed_giphy_dictionary['data'][random.randint(0,5)]['images']['original']['url']
+            x = len(parsed_giphy_dictionary['data'])
+            gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
             self.response.write(template.render({'gif_url': gif_url}))
         else:
             self.response.write("To Who?")
@@ -281,11 +323,20 @@ class GradHandler(webapp2.RequestHandler):
             search_term = "graduation"
             gradYear = self.request.get('gradYear')
             gradYName = self.request.get('gradYName')
+            #creation of the random text
+            textRand = random.randint(1, 2)
+            if textRand == 1:
+                self.response.write("Sooo, I heard you're graduating... Totally knew you could do it. <br>Congrats" + gradName + " Class of " + gradYear + "<br>From: " + gradYName)
+                self.response.write('''<html><body><br></body></html>''')
+            elif textRand == 2:
+                self.response.write('Happy Graduation' + gradName + "! <br>It's now time to face the real world!<br>" + gradYName)
+                self.response.write('''<html><body><br></body></html>''')
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
             giphy_json_content = giphy_data_source.content
             parsed_giphy_dictionary = json.loads(giphy_json_content)
-            gif_url = parsed_giphy_dictionary['data'][random.randint(0,5)]['images']['original']['url']
+            x = len(parsed_giphy_dictionary['data'])
+            gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
             self.response.write(template.render({'gif_url': gif_url}))
         else:
             self.response.write("To Who?")
@@ -305,11 +356,20 @@ class XmasHandler(webapp2.RequestHandler):
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "chistmas"
             xmasYName = self.request.get('xmasYName')
+            #creation of the random text
+            textRand = random.randint(1, 2)
+            if textRand == 1:
+                self.response.write('Dear' + xmasName + ", <br>Merry Christmas! may you and your family have a happy holiday and a prosperous New Year! <br>From: " + xmasYName)
+                self.response.write('''<html><body><br></body></html>''')
+            elif textRand == 2:
+                self.response.write('Hey ' + xmasName + "!<br>Hoping that you are celebrating the season with lots of love and joy. Merry Christmas!<br>" + xmasYName)
+                self.response.write('''<html><body><br></body></html>''')
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
             giphy_json_content = giphy_data_source.content
             parsed_giphy_dictionary = json.loads(giphy_json_content)
-            gif_url = parsed_giphy_dictionary['data'][random.randint(0,5)]['images']['original']['url']
+            x = len(parsed_giphy_dictionary['data'])
+            gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
             self.response.write(template.render({'gif_url': gif_url}))
         else:
             self.response.write("To Who?")
@@ -328,11 +388,23 @@ class ValinHandler(webapp2.RequestHandler):
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "valintines"
             valinYName = self.request.get('valinYName')
+            #creation of the random text
+            textRand = random.randint(1, 3)
+            if textRand == 1:
+                self.response.write(valinName + ",<br>Roses are red,<br>Violets are blue,<br>It's the time of the year,<br>When all I want is you!<br>Love,<br>" + valinYName)
+                self.response.write('''<html><body><br></body></html>''')
+            elif textRand == 2:
+                self.response.write(valinName + ", This may be cliche,<br>But will you be my bae?<br>Happy Valintines Day!<br>Love,<br> " + valinYName)
+                self.response.write('''<html><body><br></body></html>''')
+            elif textRand == 3:
+                self.response.write(valinName + ",<br>Just speading the love this season. Happy V day!<br>Love,<br>" + valinYName)
+                self.response.write('''<html><body><br></body></html>''')
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
             giphy_json_content = giphy_data_source.content
             parsed_giphy_dictionary = json.loads(giphy_json_content)
-            gif_url = parsed_giphy_dictionary['data'][random.randint(0,5)]['images']['original']['url']
+            x = len(parsed_giphy_dictionary['data'])
+            gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
             self.response.write(template.render({'gif_url': gif_url}))
         else:
             self.response.write("To Who?")
@@ -352,11 +424,20 @@ class HolidaysHandler(webapp2.RequestHandler):
             search_term = "holidays"
             holiType = self.request.get('holiType')
             holiYName = self.request.get('holiYName')
+            #creation of the random text
+            textRand = random.randint(1, 3)
+            if textRand == 1:
+                self.response.write('Dear ' + holiName + ",<br>Happy" + holiType + "! Enjoy the holidays while they last!<br>" + holiYName)
+                self.response.write('''<html><body><br></body></html>''')
+            elif textRand == 2:
+                self.response.write(holiName + ",<br>May you have a happy" + holiType + "!<br> " + valinYName)
+                self.response.write('''<html><body><br></body></html>''')
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
             giphy_json_content = giphy_data_source.content
             parsed_giphy_dictionary = json.loads(giphy_json_content)
-            gif_url = parsed_giphy_dictionary['data'][random.randint(0,5)]['images']['original']['url']
+            x = len(parsed_giphy_dictionary['data'])
+            gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
             self.response.write(template.render({'gif_url': gif_url}))
         else:
             self.response.write("To Who?")
@@ -376,11 +457,20 @@ class RandomHandler(webapp2.RequestHandler):
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "random"
             randYName = self.request.get('randYName')
+            #creation of the random text
+            textRand = random.randint(1, 3)
+            if textRand == 1:
+                self.response.write(randName + ",<br>Dude I'm not exactly sure why I am sending a card, but I do know you're important enough to get one!<br>" + randYName)
+                self.response.write('''<html><body><br></body></html>''')
+            elif textRand == 2:
+                self.response.write(randName + ",<br>I love you so much I used a random card generator to make this for you...<br> " + randYName)
+                self.response.write('''<html><body><br></body></html>''')
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
             giphy_json_content = giphy_data_source.content
             parsed_giphy_dictionary = json.loads(giphy_json_content)
-            gif_url = parsed_giphy_dictionary['data'][random.randint(0,5)]['images']['original']['url']
+            x = len(parsed_giphy_dictionary['data'])
+            gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
             self.response.write(template.render({'gif_url': gif_url}))
         else:
             self.response.write('''
