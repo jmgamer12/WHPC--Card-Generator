@@ -43,6 +43,9 @@ class MainHandler(webapp2.RequestHandler):
             search_term = "birthday"
             bdAge = self.request.get('bdAge')
             bdYName = self.request.get('bdYName')
+            # Make emptty variables for quotes within handlers about here
+            quote = None
+            quote1 = None
             #creation of the random text
             textRand = random.randint(1, 2)
             if textRand == 1:
@@ -75,6 +78,9 @@ class AnniHandler(webapp2.RequestHandler):
             search_term = "anniversary"
             anniYears = self.request.get('anniYears')
             anniYName = self.request.get('anniYName')
+            # Make emptty variables for quotes within handlers about here
+            quote = None
+            quote1 = None
             #creation of the random text
             textRand = random.randint(1, 2)
             if textRand == 1:
@@ -143,6 +149,9 @@ class ConHandler(webapp2.RequestHandler):
             #search_term = "congradulations"
             conCongra = self.request.get('conCongra')
             conYName = self.request.get('conYName')
+            # Make emptty variables for quotes within handlers about here
+            quote = None
+            quote1 = None
             #creation of the random text
             textRand = random.randint(1, 2)
             if textRand == 1:
@@ -174,6 +183,9 @@ class WellHandler(webapp2.RequestHandler):
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "sick"
             gwYName = self.request.get('gwYName')
+            # Make emptty variables for quotes within handlers about here
+            quote = None
+            quote1 = None
             #creation of the random text
             textRand = random.randint(1, 2)
             if textRand == 1:
@@ -205,6 +217,9 @@ class GradHandler(webapp2.RequestHandler):
             search_term = "graduation"
             gradYear = self.request.get('gradYear')
             gradYName = self.request.get('gradYName')
+            # Make emptty variables for quotes within handlers about here
+            quote = None
+            quote1 = None
             #creation of the random text
             textRand = random.randint(1, 2)
             if textRand == 1:
@@ -236,6 +251,9 @@ class XmasHandler(webapp2.RequestHandler):
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "chistmas"
             xmasYName = self.request.get('xmasYName')
+            # Make emptty variables for quotes within handlers about here
+            quote = None
+            quote1 = None
             #creation of the random text
             textRand = random.randint(1, 2)
             if textRand == 1:
@@ -266,6 +284,9 @@ class ValinHandler(webapp2.RequestHandler):
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "love"
             valinYName = self.request.get('valinYName')
+            # Make emptty variables for quotes within handlers about here
+            quote = None
+            quote1 = None
             #creation of the random text
             textRand = random.randint(1, 3)
             if textRand == 1:
@@ -299,6 +320,9 @@ class HolidaysHandler(webapp2.RequestHandler):
             search_term = "party"
             holiType = self.request.get('holiType')
             holiYName = self.request.get('holiYName')
+            # Make emptty variables for quotes within handlers about here
+            quote = None
+            quote1 = None
             #creation of the random text
             textRand = random.randint(1, 2)
             if textRand == 1:
@@ -330,6 +354,9 @@ class RandomHandler(webapp2.RequestHandler):
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "random"
             randYName = self.request.get('randYName')
+            # Make emptty variables for quotes within handlers about here
+            quote = None
+            quote1 = None
             #creation of the random text
             textRand = random.randint(1, 2)
             if textRand == 1:
