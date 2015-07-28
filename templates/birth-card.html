@@ -6,7 +6,11 @@
   <body>
     <!-- So right here is where you shall replicate the dictionary variables to
     actually be accessible by CSS-->
-    <p> {{ quote or quote1 }}</p>
-    <img src="{{ gif_url }}" />
+    <table>
+      <tr>
+        <td><img src="{{ gif_url }}" /></td>
+        <td><p> {{ quote or quote1 }}</p></td>
+      </tr>
+    </table>
   </body>
 </html>
