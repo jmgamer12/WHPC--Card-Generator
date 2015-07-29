@@ -1,5 +1,5 @@
 html {
-  background: url(pic/random.jpg);
+  background: url(/images/css-pic/random.jpg);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
