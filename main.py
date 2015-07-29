@@ -44,7 +44,7 @@ class MainHandler(webapp2.RequestHandler):
             bdAge = self.request.get('bdAge')
             bdYName = self.request.get('bdYName')
 
-            # Make emptty variables for quotes within handlers about here
+            # Make empty variables for quotes within handlers about here
 
             quote = None
             quote1 = None
@@ -83,7 +83,7 @@ class AnniHandler(webapp2.RequestHandler):
             search_term = "marriage"
             anniYears = self.request.get('anniYears')
             anniYName = self.request.get('anniYName')
-            # Make emptty variables for quotes within handlers about here
+            # Make empty variables for quotes within handlers about here
             quote = None
             quote1 = None
             #creation of the random text
@@ -160,7 +160,7 @@ class ConHandler(webapp2.RequestHandler):
             #search_term = "congradulations"
             conCongra = self.request.get('conCongra')
             conYName = self.request.get('conYName')
-            # Make emptty variables for quotes within handlers about here
+            # Make empty variables for quotes within handlers about here
             quote = None
             quote1 = None
             #creation of the random text
@@ -197,7 +197,7 @@ class WellHandler(webapp2.RequestHandler):
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "sick"
             gwYName = self.request.get('gwYName')
-            # Make emptty variables for quotes within handlers about here
+            # Make empty variables for quotes within handlers about here
             quote = None
             quote1 = None
             #creation of the random text
@@ -234,7 +234,7 @@ class GradHandler(webapp2.RequestHandler):
             search_term = "graduation"
             gradYear = self.request.get('gradYear')
             gradYName = self.request.get('gradYName')
-            # Make emptty variables for quotes within handlers about here
+            # Make empty variables for quotes within handlers about here
             quote = None
             quote1 = None
             #creation of the random text
@@ -271,7 +271,7 @@ class XmasHandler(webapp2.RequestHandler):
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "chistmas"
             xmasYName = self.request.get('xmasYName')
-            # Make emptty variables for quotes within handlers about here
+            # Make empty variables for quotes within handlers about here
             quote = None
             quote1 = None
             #creation of the random text
@@ -337,27 +337,15 @@ class HolidaysHandler(webapp2.RequestHandler):
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
         search_term = self.request.get('holiName')
         # Make empty variables for quotes within handlers about here
+        holiType = self.request.get('holiType')
+        holiYName = self.request.get('holiYName')
         quote = None
         quote1 = None
         if holiName:
             search_term = self.request.get('holiType')
             search_term= search_term.replace(' ', '+')
-            #search_term = "party"
-            holiType = self.request.get('holiType')
-            holiYName = self.request.get('holiYName')
-            # Make emptty variables for quotes within handlers about here
-            quote = None
-            quote1 = None
             #creation of the random text
-
-
-            textRand = random.randint(1, 3)
-
             textRand = random.randint(1, 2)
-
-
-            textRand = random.randint(1, 2)
-
             if textRand == 1:
                 quote = 'Dear ' + holiName + ",<br><br>Happy " + holiType + "! <br> Enjoy the holidays while they last!<br><br>" + holiYName
             elif textRand == 2:
@@ -390,7 +378,7 @@ class RandomHandler(webapp2.RequestHandler):
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "random"
             randYName = self.request.get('randYName')
-            # Make emptty variables for quotes within handlers about here
+            # Make empty variables for quotes within handlers about here
             quote = None
             quote1 = None
             #creation of the random text
