@@ -141,6 +141,9 @@ class ConHandler(webapp2.RequestHandler):
     def post(self):
         template = jinja_environment.get_template('templates/congrats-card.html')
         conName = self.request.get('conName')
+        conCongra = self.request.get('conCongra')
+        conYName = self.request.get('conYName')
+
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
         search_term = self.request.get('conName')
@@ -149,9 +152,8 @@ class ConHandler(webapp2.RequestHandler):
         quote1 = None
         if conName:
             search_term = self.request.get('conCongra')
+            search_term= search_term.replace(' ', '+')
             #search_term = "congradulations"
-            conCongra = self.request.get('conCongra')
-            conYName = self.request.get('conYName')
             #creation of the random text
             textRand = random.randint(1, 2)
             if textRand == 1:
