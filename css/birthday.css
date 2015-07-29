@@ -1,7 +1,27 @@
 html {
-  background: url(pic/bday2.jpg) no-repeat center center fixed;
+  background: url(pic/bday.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+#quote {
+  line-height: 1.3cm;
+  font-size: 25px;
+  font-family: 'Coming Soon', cursive;
+  padding-left: 70px;
+  padding-top: 150px;
+  font-weight: bold;
+}
+
+img {
+  padding-left: 250px;
+  padding-top: 150px;
+  padding-right: 80px;
+  padding-bottom: 50px;
+}
+
+#table {
+  border-color: black;
 }
