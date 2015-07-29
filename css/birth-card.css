@@ -1,5 +1,5 @@
 html {
-  background: url(pic/getwell.jpg) no-repeat center center fixed;
+  background: url(pic/birth.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -8,20 +8,19 @@ html {
 
 img {
   padding-left: 110px;
-  padding-top: 90px;
+  padding-top: 80px;
   padding-right: 80px;
-  padding-bottom: 70px;
+  padding-bottom: 60px;
 }
 
 #quote {
   line-height: 1.3cm;
-  font-size: 25px;
-  font-family: 'Homemade Apple', cursive;
+  font-size: 35px;
+  font-family: 'Dawning of a New Day', cursive;
   padding-left: 70px;
-  padding-top: 90px;
+  padding-top: 80px;
   padding-right: 120px;
-  padding-bottom: 70px;
+  padding-bottom: 60px;
   background-color: rgba(255,255,255,0.6);
   border-radius: 100px;
-  font-weight: bold;
 }

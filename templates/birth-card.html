@@ -2,18 +2,20 @@
 <html>
   <head>
     <title>Your Card</title>
-    <link rel="stylesheet" type="text/css" href="css/birth.css">
+    <link rel="stylesheet" type="text/css" href="css/birth-card.css">
+    <link href='http://fonts.googleapis.com/css?family=Dawning+of+a+New+Day' rel='stylesheet' type='text/css'>
   </head>
   <body>
 
     <!-- So right here is where you shall replicate the dictionary variables to
     actually be accessible by CSS-->
-    <table>
+    <center>
+    <table id="quote">
       <tr>
         <td><img src="{{ gif_url }}" /></td>
         <td><p> {{ quote or quote1 }}</p></td>
       </tr>
     </table>
-
+    </center>
   </body>
 </html>

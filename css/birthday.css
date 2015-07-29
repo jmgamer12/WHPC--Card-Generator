@@ -5,3 +5,23 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
+
+#quote {
+  line-height: 1.3cm;
+  font-size: 25px;
+  font-family: 'Coming Soon', cursive;
+  padding-left: 70px;
+  padding-top: 150px;
+  font-weight: bold;
+}
+
+img {
+  padding-left: 250px;
+  padding-top: 150px;
+  padding-right: 80px;
+  padding-bottom: 50px;
+}
+
+#table {
+  border-color: black;
+}
