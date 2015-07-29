@@ -30,7 +30,7 @@ img {
   text-align: center;
   position: relative;
   width: 10%;
-	top: 120px; /* negative value of footer height */
+	top: 60px; /* negative value of footer height */
 	height: 180px;
 	clear:both;
   font-family: 'Coming Soon', cursive;
