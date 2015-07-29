@@ -19,3 +19,23 @@ td{
   font-size: 30px;
   border-radius: 30px;
 }
+#Home {
+  background-color: rgba(0,0,0,0.7);
+  font-weight: bold;
+  color: white;
+  width: 10%;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 100%;
+  font-family: 'Permanent Marker', cursive;
+  border-radius: 30px;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+  font-size: 24px;
+}
+a:visited {
+  color: inherit;
+}

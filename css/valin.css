@@ -5,9 +5,9 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
-
-p {
+#table {
   text-align: right;
+  padding-top: 300px;
   padding-top: 50px;
   font-family: 'Bad Script', cursive;
   font-weight: bold;
@@ -16,9 +16,20 @@ p {
   padding-right: 80px;
   padding-left: 70px;
   padding-bottom: 50px;
-  border-radius: 30px;
+ border-radius: 30px;
 }
 #Home {
-  margin: auto;
-  text-align: right;
+  float: right;
+  width: 10%;
+  font-family: 'Bad Script', cursive;
+  font-weight: bold;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 10px;
+}
+a:hover {
+  font-size: 24px;
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
 }

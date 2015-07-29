@@ -17,3 +17,23 @@ td{
   line-height: 1cm;
   border-radius: 30px;
 }
+#Home {
+  background-color: rgba(255,255,255,0.4);
+  width: 10%;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 100%;
+  font-family: 'Chewy', cursive;
+  border-radius: 30px;
+  margin-left: 50px;
+  float: right;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+  font-size: 24px;
+}
+a:visited {
+  color: inherit;
+}
