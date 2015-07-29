@@ -18,3 +18,20 @@ td{
   border-radius: 30px;
   text-align: justify;
 }
+#Home {
+  background-color: rgba(255,255,255,0.8);
+  width: 10%;
+  padding:10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 100%;
+  font-family: 'Marck Script', cursive;
+  border-radius: 30px;
+}
+a:hover {
+  font-size: 24px;
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+}

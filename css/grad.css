@@ -17,15 +17,24 @@ td{
   line-height: 1cm;
   font-size: 25px;
 }
-a {
+#Home {
   text-decoration: none;
-  color: white;
-  text-align: right;
+  color: inherit;
+  background-color: rgba(255,255,255,0.8);
+  width: 10%;
+  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 100%;
+  border-radius: 30px;
+  font-family: 'Bangers', cursive;
+  text-align: center;
 }
 a:hover {
   text-decoration: none;
-  color: white;
+  color: inherit;
+  font-size: 24px;
 }
-#Home {
-  text-align: right;
+a:visited {
+  color: inherit;
 }

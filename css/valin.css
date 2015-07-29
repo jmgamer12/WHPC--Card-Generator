@@ -5,15 +5,18 @@ html {
   -o-background-size: cover;
   background-size: cover;
 }
-
-p {
-  text-align: right;
-  padding-top: 300px;
-  font-family: 'Bad Script', cursive;
-  font-weight: bold;
-  font-size: 25px;
-}
 #Home {
   margin: auto;
   text-align: right;
+  text-align: right;
+  padding-top: 80px;
+  font-family: 'Bad Script', cursive;
+  font-weight: bold;
+}
+a:hover {
+  font-size: 24px;
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
 }
