@@ -2,13 +2,19 @@
 <html>
 <head>
     <title>Your Card</title>
+    <link rel="stylesheet" type="text/css" href="css/birthday.css">
+    <link href='http://fonts.googleapis.com/css?family=Coming+Soon' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <table>
+
+    <table id="table">
       <tr>
+        <center>
         <td><img src="{{ gif_url }}" /></td>
-        <td><p> {{ quote or quote1 }}</p></td>
+        <td><p><div id="quote"> {{ quote or quote1 }}</div></p></td>
+        </center>
       </tr>
     </table>
+
   </body>
 </html>
