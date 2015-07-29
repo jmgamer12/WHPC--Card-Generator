@@ -12,4 +12,8 @@ td{
   padding-top: 200px;
   padding-bottom: 200px;
   height: 100%;
+  font-family: 'Chewy', cursive;
+  font-size: 28px;
+  line-height: 1cm;
+  border-radius: 30px;
 }
