@@ -12,6 +12,10 @@ td{
   padding-top: 200px;
   padding-bottom: 200px;
   height: 100%;
+  border-radius: 30px;
+  font-family: 'Bangers', cursive;
+  line-height: 1cm;
+  font-size: 25px;
 }
 a {
   text-decoration: none;

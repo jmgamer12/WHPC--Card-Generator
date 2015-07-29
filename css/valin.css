@@ -9,6 +9,9 @@ html {
 p {
   text-align: right;
   padding-top: 300px;
+  font-family: 'Bad Script', cursive;
+  font-weight: bold;
+  font-size: 25px;
 }
 #Home {
   margin: auto;

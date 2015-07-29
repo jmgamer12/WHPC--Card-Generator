@@ -80,7 +80,7 @@ class AnniHandler(webapp2.RequestHandler):
         quote1 = None
         if anniName:
             #search_term = self.request.get('bdName', 'bdAge')
-            search_term = "anniversary"
+            search_term = "marriage"
             anniYears = self.request.get('anniYears')
             anniYName = self.request.get('anniYName')
             # Make emptty variables for quotes within handlers about here
@@ -240,9 +240,9 @@ class GradHandler(webapp2.RequestHandler):
             #creation of the random text
             textRand = random.randint(1, 2)
             if textRand == 1:
-                quote = "Sooo, I heard you're graduating... Totally knew you could do it. <br>Congrats " + gradName + " Class of " + gradYear + "<br>From: " + gradYName
+                quote = "Sooo, I heard you're graduating... Totally knew you could do it. <br><br>Congrats, " + gradName + "! Class of " + gradYear + "<br><br><br>From: " + gradYName
             elif textRand == 2:
-                quote1 = 'Happy Graduation ' + gradName + "! <br>It's now time to face the real world!<br>" + gradYName
+                quote1 = 'Happy Graduation, ' + gradName + "! <br><br>It's now time to face the real world!<br><br><br>" + gradYName
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
             giphy_json_content = giphy_data_source.content
@@ -277,9 +277,9 @@ class XmasHandler(webapp2.RequestHandler):
             #creation of the random text
             textRand = random.randint(1, 2)
             if textRand == 1:
-                quote = 'Dear' + xmasName + ", <br>Merry Christmas! May you and your family have a happy holiday and a prosperous New Year! <br>From: " + xmasYName
+                quote = 'Dear' + xmasName + ", <br><br>Merry Christmas! May you and your family have a happy holidays and a prosperous New Year! <br><br><br>From: " + xmasYName
             elif textRand == 2:
-                quote1 = 'Hey ' + xmasName + "!<br>Hoping that you are celebrating the season with lots of love and joy. Merry Christmas!<br>" + xmasYName
+                quote1 = 'Hey ' + xmasName + "!<br><br>Hoping that you are celebrating the season with lots of love and joy. <br><br> Merry Christmas!<br><br><br>" + xmasYName
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
             giphy_json_content = giphy_data_source.content
@@ -311,11 +311,11 @@ class ValinHandler(webapp2.RequestHandler):
             #creation of the random text
             textRand = random.randint(1, 3)
             if textRand == 1:
-                quote = valinName + ",<br>Roses are red,<br>Violets are blue,<br>It's the time of the year,<br>When all I want is you!<br>Love,<br>" + valinYName
+                quote = valinName + ",<br><br>Roses are red,<br>Violets are blue,<br>It's the time of the year,<br>When all I want is you!<br><br>Love,<br>" + valinYName
             elif textRand == 2:
-                quote1 = valinName + ", This may be cliche,<br>But will you be my bae?<br>Happy Valintines Day!<br>Love,<br> " + valinYName
+                quote1 = valinName + ",<br><br> This may be cliche,<br>But will you be my bae?<br><br>Happy Valintines Day!<br><br><br>Love,<br> " + valinYName
             elif textRand == 3:
-                quote2 = valinName + ",<br>Just speading the love this season. Happy V day!<br>Love,<br>" + valinYName
+                quote2 = valinName + ",<br><br>Just speading the love this season.<br><br> Happy Valentine's Day!<br><br><br>Love,<br>" + valinYName
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
             giphy_json_content = giphy_data_source.content
@@ -358,9 +358,9 @@ class HolidaysHandler(webapp2.RequestHandler):
             textRand = random.randint(1, 2)
 
             if textRand == 1:
-                quote = 'Dear ' + holiName + ",<br>Happy " + holiType + "! Enjoy the holidays while they last!<br>" + holiYName
+                quote = 'Dear ' + holiName + ",<br><br>Happy " + holiType + "! <br> Enjoy the holidays while they last!<br><br>" + holiYName
             elif textRand == 2:
-                quote1 = holiName + ",<br>May you have a happy " + holiType + "!<br> " + holiYName
+                quote1 = holiName + ",<br><br>May you have a happy " + holiType + "!<br><br> " + holiYName
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
             giphy_json_content = giphy_data_source.content
@@ -396,9 +396,9 @@ class RandomHandler(webapp2.RequestHandler):
             textRand = random.randint(1, 2)
 
             if textRand == 1:
-                quote = randName + ",<br>Dude I'm not exactly sure why I am sending a card, but I do know you're important enough to get one!<br>" + randYName
+                quote = randName + ",<br><br>Dude, I'm not exactly sure why I am sending a card, but I do know you're important enough to get one!<br><br>" + randYName
             elif textRand == 2:
-                quote1 = randName + ",<br>I love you so much I used a random card generator to make this for you...<br> " + randYName
+                quote1 = randName + ",<br><br>I love you so much I used a random card generator to make this for you...<br> <br>" + randYName
             # The thing above checks if string in birthday name input is empty.
             giphy_data_source = urlfetch.fetch(base_url + search_term + api_key_url)
             giphy_json_content = giphy_data_source.content
