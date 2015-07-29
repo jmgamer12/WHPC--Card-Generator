@@ -25,3 +25,23 @@ img {
 #table {
   border-color: black;
 }
+
+#Home {
+  text-align: center;
+  position: relative;
+  width: 10%;
+	top: 120px; /* negative value of footer height */
+	height: 180px;
+	clear:both;
+  font-family: 'Coming Soon', cursive;
+  padding-left: 70px;
+  padding-top: 150px;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: none;
+  font-size: 24px;
+}
+a:visited {
+  color: inherit;
+}

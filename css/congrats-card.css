@@ -20,3 +20,21 @@ img {
   background-color: rgba(255,255,255,0.8);
   border-radius: 100px;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+#Home {
+  font-size: 22px;
+  font-family: 'Gochi Hand', cursive;
+  width: 5%;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 100px;
+}
+a:hover {
+  font-size: 28px;
+}

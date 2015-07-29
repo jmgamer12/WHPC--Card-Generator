@@ -13,3 +13,15 @@ td{
   padding-bottom: 200px;
   height: 100%;
 }
+a {
+  text-decoration: none;
+  color: white;
+  text-align: right;
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+#Home {
+  text-align: right;
+}

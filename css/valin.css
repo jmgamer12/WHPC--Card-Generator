@@ -6,7 +6,11 @@ html {
   background-size: cover;
 }
 
-p{
+p {
   text-align: right;
   padding-top: 300px;
+}
+#Home {
+  margin: auto;
+  text-align: right;
 }
