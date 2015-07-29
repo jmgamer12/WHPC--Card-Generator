@@ -1,5 +1,5 @@
 html {
-  background: url(bg.jpg) no-repeat center center fixed;
+  background: url(back.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -22,10 +22,11 @@ h1 {
   padding-right: 30px;
   padding-bottom: 30px;
   border-radius: 50px;
-  width: 85%;
+  width: 30%;
   position: absolute;
-  left: 60px;
+  left: 500px;
   top: 370px;
   right:60px;
-  line-height: 1cm;
+  line-height: 1.03cm;
+  text-align: justify;
 }
