@@ -341,6 +341,7 @@ class HolidaysHandler(webapp2.RequestHandler):
         quote1 = None
         if holiName:
             search_term = self.request.get('holiType')
+            search_term= search_term.replace(' ', '+')
             #search_term = "party"
             holiType = self.request.get('holiType')
             holiYName = self.request.get('holiYName')
