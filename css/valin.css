@@ -8,10 +8,16 @@ html {
 #Home {
   margin: auto;
   text-align: right;
-  text-align: right;
-  padding-top: 80px;
+  padding-top: 50px;
   font-family: 'Bad Script', cursive;
   font-weight: bold;
+  font-size: 25px;
+  background-color: rgba(255,255,255,0.9);
+  padding-right: 80px;
+  padding-left: 70px;
+  padding-bottom: 50px;
+  border-radius: 30px;
+>>>>>>> 22a19602de00a2bb782cb3c34da327e1b65f8419
 }
 a:hover {
   font-size: 24px;
