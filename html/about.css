@@ -46,6 +46,7 @@ h1 {
   line-height: 1.2cm;
 }
 
-#selfie {
+.selfie {
   border-radius: 10px;
+  height: 250px;
 }
