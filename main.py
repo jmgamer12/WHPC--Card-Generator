@@ -80,7 +80,7 @@ class AnniHandler(webapp2.RequestHandler):
         quote1 = None
         if anniName:
             #search_term = self.request.get('bdName', 'bdAge')
-            search_term = "anniversary"
+            search_term = "marriage"
             anniYears = self.request.get('anniYears')
             anniYName = self.request.get('anniYName')
             # Make emptty variables for quotes within handlers about here
