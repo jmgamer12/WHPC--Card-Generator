@@ -1,5 +1,5 @@
 html {
-  background: url(pic/christmas.jpg) no-repeat center center fixed;
+  background: url(/images/css-pic/christmas.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

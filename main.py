@@ -28,12 +28,12 @@ jinja_environment = jinja2.Environment(
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/mainpage.html')
+        template = jinja_environment.get_template('mainpage.html')
         self.response.write(template.render())
 
 class BirthdayHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/bday-card.html')
+        template = jinja_environment.get_template('/templates/bday-card.html')
         bdName = self.request.get('bdName')
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
@@ -61,11 +61,13 @@ class BirthdayHandler(webapp2.RequestHandler):
             x = len(parsed_giphy_dictionary['data'])
             gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
             self.response.write(template.render({'bdName': bdName, 'bdAge': bdAge, 'bdYName': bdYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
+            if search_term > x:
+                self.response.write("Kripa stop.")
         else:
             self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
 
     def post(self):
-        template = jinja_environment.get_template('templates/bday-card.html')
+        template = jinja_environment.get_template('/templates/bday-card.html')
         bdName = self.request.get('bdName')
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
@@ -100,7 +102,7 @@ class BirthdayHandler(webapp2.RequestHandler):
 
 class AnniHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/anni-card.html')
+        template = jinja_environment.get_template('/templates/anni-card.html')
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
         anniName = self.request.get('anniName')
@@ -133,7 +135,7 @@ class AnniHandler(webapp2.RequestHandler):
 
 
     def post(self):
-        template = jinja_environment.get_template('templates/anni-card.html')
+        template = jinja_environment.get_template('/templates/anni-card.html')
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
         anniName = self.request.get('anniName')
@@ -167,7 +169,7 @@ class AnniHandler(webapp2.RequestHandler):
 
 class BirthHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/birth-card.html')
+        template = jinja_environment.get_template('/templates/birth-card.html')
         birthName = self.request.get('birthName')
         birthYName = self.request.get('birthYName')
         base_url = "http://api.giphy.com/v1/gifs/search?q="
@@ -199,7 +201,7 @@ class BirthHandler(webapp2.RequestHandler):
 
 
     def post(self):
-        template = jinja_environment.get_template('templates/birth-card.html')
+        template = jinja_environment.get_template('/templates/birth-card.html')
         birthName = self.request.get('birthName')
         birthYName = self.request.get('birthYName')
         base_url = "http://api.giphy.com/v1/gifs/search?q="
@@ -232,7 +234,7 @@ class BirthHandler(webapp2.RequestHandler):
 
 class ConHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/congrats-card.html')
+        template = jinja_environment.get_template('/templates/congrats-card.html')
         conName = self.request.get('conName')
         conCongra = self.request.get('conCongra')
         conYName = self.request.get('conYName')
@@ -269,7 +271,7 @@ class ConHandler(webapp2.RequestHandler):
 
 
     def post(self):
-        template = jinja_environment.get_template('templates/congrats-card.html')
+        template = jinja_environment.get_template('/templates/congrats-card.html')
         conName = self.request.get('conName')
         conCongra = self.request.get('conCongra')
         conYName = self.request.get('conYName')
@@ -307,7 +309,7 @@ class ConHandler(webapp2.RequestHandler):
 
 class WellHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/getwell-card.html')
+        template = jinja_environment.get_template('/templates/getwell-card.html')
         gwName = self.request.get('gwName')
         gwYName = self.request.get('gwYName')
         base_url = "http://api.giphy.com/v1/gifs/search?q="
@@ -340,7 +342,7 @@ class WellHandler(webapp2.RequestHandler):
             self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
 
     def post(self):
-        template = jinja_environment.get_template('templates/getwell-card.html')
+        template = jinja_environment.get_template('/templates/getwell-card.html')
         gwName = self.request.get('gwName')
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
@@ -373,7 +375,7 @@ class WellHandler(webapp2.RequestHandler):
 
 class GradHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/grad-card.html')
+        template = jinja_environment.get_template('/templates/grad-card.html')
         gradName = self.request.get('gradName')
         gradYear = self.request.get('gradYear')
         gradYName = self.request.get('gradYName')
@@ -409,7 +411,7 @@ class GradHandler(webapp2.RequestHandler):
 
 
     def post(self):
-        template = jinja_environment.get_template('templates/grad-card.html')
+        template = jinja_environment.get_template('/templates/grad-card.html')
         gradName = self.request.get('gradName')
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
@@ -444,7 +446,7 @@ class GradHandler(webapp2.RequestHandler):
 
 class XmasHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/xmas-card.html')
+        template = jinja_environment.get_template('/templates/xmas-card.html')
         xmasName = self.request.get('xmasName')
         xmasYName = self.request.get('xmasYName')
         base_url = "http://api.giphy.com/v1/gifs/search?q="
@@ -477,7 +479,7 @@ class XmasHandler(webapp2.RequestHandler):
             self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
 
     def post(self):
-        template = jinja_environment.get_template('templates/xmas-card.html')
+        template = jinja_environment.get_template('/templates/xmas-card.html')
         xmasName = self.request.get('xmasName')
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
@@ -510,7 +512,7 @@ class XmasHandler(webapp2.RequestHandler):
 
 class ValinHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/valin-card.html')
+        template = jinja_environment.get_template('/templates/valin-card.html')
         valinName = self.request.get('valinName')
         valinYName = self.request.get('valinYName')
         base_url = "http://api.giphy.com/v1/gifs/search?q="
@@ -543,7 +545,7 @@ class ValinHandler(webapp2.RequestHandler):
             self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
 
     def post(self):
-        template = jinja_environment.get_template('templates/valin-card.html')
+        template = jinja_environment.get_template('/templates/valin-card.html')
         valinName = self.request.get('valinName')
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
@@ -576,7 +578,7 @@ class ValinHandler(webapp2.RequestHandler):
 
 class HolidaysHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/holidays-card.html')
+        template = jinja_environment.get_template('/templates/holidays-card.html')
         holiName = self.request.get('holiName')
         holiType = self.request.get('holiType')
         holiYName = self.request.get('holiYName')
@@ -600,13 +602,16 @@ class HolidaysHandler(webapp2.RequestHandler):
             giphy_json_content = giphy_data_source.content
             parsed_giphy_dictionary = json.loads(giphy_json_content)
             x = len(parsed_giphy_dictionary['data'])
-            gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
-            self.response.write(template.render({'holiName': holiName, 'holiType': holiType, 'holiYName': holiYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
+            if x > 0:
+                gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
+                self.response.write(template.render({'holiName': holiName, 'holiType': holiType, 'holiYName': holiYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
+            else:
+                self.response.write("Kripa stop.")
         else:
             self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
 
     def post(self):
-        template = jinja_environment.get_template('templates/holidays-card.html')
+        template = jinja_environment.get_template('/templates/holidays-card.html')
         holiName = self.request.get('holiName')
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
@@ -638,7 +643,7 @@ class HolidaysHandler(webapp2.RequestHandler):
 
 class RandomHandler(webapp2.RequestHandler):
     def get(self):
-        template = jinja_environment.get_template('templates/random-card.html')
+        template = jinja_environment.get_template('/templates/random-card.html')
         randName = self.request.get('randName')
         randYName = self.request.get('randYName')
         base_url = "http://api.giphy.com/v1/gifs/search?q="
@@ -650,6 +655,7 @@ class RandomHandler(webapp2.RequestHandler):
         if randName:
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "random"
+            search_term= search_term.replace(' ', '+')
             randYName = self.request.get('randYName')
             # Make empty variables for quotes within handlers about here
             quote = None
@@ -672,7 +678,7 @@ class RandomHandler(webapp2.RequestHandler):
             self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
 
     def post(self):
-        template = jinja_environment.get_template('templates/random-card.html')
+        template = jinja_environment.get_template('/templates/random-card.html')
         randName = self.request.get('randName')
         base_url = "http://api.giphy.com/v1/gifs/search?q="
         api_key_url = "&api_key=dc6zaTOxFJmzC&limit=5"
@@ -706,14 +712,14 @@ class RandomHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    ('/bday-card', BirthdayHandler),
-    ('/anni-card', AnniHandler),
-    ('/birth-card', BirthHandler),
-    ('/congrats-card', ConHandler),
-    ('/getwell-card', WellHandler),
-    ('/grad-card', GradHandler),
-    ('/xmas-card', XmasHandler),
-    ('/valin-card', ValinHandler),
-    ('/holidays-card', HolidaysHandler),
-    ('/random-card', RandomHandler),
+    ('/templates/bday-card', BirthdayHandler),
+    ('/templates/anni-card', AnniHandler),
+    ('/templates/birth-card', BirthHandler),
+    ('/templates/congrats-card', ConHandler),
+    ('/templates/getwell-card', WellHandler),
+    ('/templates/grad-card', GradHandler),
+    ('/templates/xmas-card', XmasHandler),
+    ('/templates/valin-card', ValinHandler),
+    ('/templates/holidays-card', HolidaysHandler),
+    ('/templates/random-card', RandomHandler),
 ], debug=True)
