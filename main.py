@@ -66,7 +66,7 @@ class BirthdayHandler(webapp2.RequestHandler):
                 quote1 = bdName + ',' + '<br>' + "<br>Hey dude happy  birthday! " + "You're finally " + bdAge +  '!' + '<br><br>' + bdYName
             self.response.write(template.render({'bdName': bdName, 'bdAge': bdAge, 'bdYName': bdYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="/images/owl.jpg"> </img><center><br></body></html>''')
 
 class AnniHandler(webapp2.RequestHandler):
     def get(self):
@@ -101,7 +101,7 @@ class AnniHandler(webapp2.RequestHandler):
                 quote1 = anniName + ", <br><br>Congratulations on reaching " + anniYears + ' years! <br><br><br>' + anniYName
             self.response.write(template.render({'anniYears': anniYears, 'anniName': anniName, 'anniYName': anniYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="/images/owl.jpg"> </img><center><br></body></html>''')
 
 
 class BirthHandler(webapp2.RequestHandler):
@@ -141,7 +141,7 @@ class BirthHandler(webapp2.RequestHandler):
             # Add all variables to dictionary here. Also take a look at birth-card.html for more hep
             self.response.write(template.render({'birthName': birthName, 'quote1': quote1, 'birthYName': birthYName, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="/images/owl.jpg"> </img><center><br></body></html>''')
 
 
 class ConHandler(webapp2.RequestHandler):
@@ -182,7 +182,7 @@ class ConHandler(webapp2.RequestHandler):
             # The thing above checks if string in birthday name input is empty.
             self.response.write(template.render({'conName': conName, 'conCongra': conCongra, 'conYName': conYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="/images/owl.jpg"> </img><center><br></body></html>''')
 
 class WellHandler(webapp2.RequestHandler):
     def get(self):
@@ -218,7 +218,7 @@ class WellHandler(webapp2.RequestHandler):
             # The thing above checks if string in birthday name input is empty.
             self.response.write(template.render({'gwName': gwName, 'gwYName': gwYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="/images/owl.jpg"> </img><center><br></body></html>''')
 
 class GradHandler(webapp2.RequestHandler):
     def get(self):
@@ -255,7 +255,7 @@ class GradHandler(webapp2.RequestHandler):
             # The thing above checks if string in birthday name input is empty.
             self.response.write(template.render({'gradName': gradName, 'gradYName': gradYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="/images/owl.jpg"> </img><center><br></body></html>''')
 
 class XmasHandler(webapp2.RequestHandler):
     def get(self):
@@ -292,7 +292,7 @@ class XmasHandler(webapp2.RequestHandler):
             # The thing above checks if string in birthday name input is empty.
             self.response.write(template.render({'xmasName': xmasName, 'xmasYName': xmasYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="/images/owl.jpg"> </img><center><br></body></html>''')
 
 class ValinHandler(webapp2.RequestHandler):
     def get(self):
@@ -328,7 +328,7 @@ class ValinHandler(webapp2.RequestHandler):
             # The thing above checks if string in birthday name input is empty.
             self.response.write(template.render({'valinYName': valinYName, 'quote2': quote2, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="/images/owl.jpg"> </img><center><br></body></html>''')
 
 class HolidaysHandler(webapp2.RequestHandler):
     def get(self):
@@ -365,7 +365,7 @@ class HolidaysHandler(webapp2.RequestHandler):
                     quote1 = holiName + ",<br><br>May you have a happy " + holiType + "!<br><br> " + holiYName
                 self.response.write(template.render({'holiName': holiName, 'holiType': holiType, 'holiYName': holiYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="/images/owl.jpg"> </img><center><br></body></html>''')
 
 class RandomHandler(webapp2.RequestHandler):
     def get(self):
@@ -405,7 +405,7 @@ class RandomHandler(webapp2.RequestHandler):
             # The thing above checks if string in birthday name input is empty.
             self.response.write(template.render({'randName': randName, 'randYName': randYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
-            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
+            self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="/images/owl.jpg"> </img><center><br></body></html>''')
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
