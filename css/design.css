@@ -17,7 +17,7 @@ h2 {
 
 .nav:hover{
   cursor: pointer;
-  font-size: 40px;
+  font-size: 33px;
 }
 
 /** #first {
@@ -214,12 +214,13 @@ table {
 
 td {
   font-size: 25px;
-  border-radius: 300px;
+  border-radius: 350px;
   background-color: rgba(255,255,255,0.6);
-  padding: 70px;
+  padding: 30px;
   border-collapse: collapse;
   position: relative;
-  height: 70px;
+  height: 150px;
+  width: 180px;
   font-family: 'Just Me Again Down Here', cursive;
 }
 
