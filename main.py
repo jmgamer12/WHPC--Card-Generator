@@ -61,7 +61,8 @@ class BirthdayHandler(webapp2.RequestHandler):
             x = len(parsed_giphy_dictionary['data'])
             gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
             self.response.write(template.render({'bdName': bdName, 'bdAge': bdAge, 'bdYName': bdYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
-
+            if search_term > x:
+                self.response.write("Kripa stop.")
         else:
             self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
 
@@ -601,8 +602,11 @@ class HolidaysHandler(webapp2.RequestHandler):
             giphy_json_content = giphy_data_source.content
             parsed_giphy_dictionary = json.loads(giphy_json_content)
             x = len(parsed_giphy_dictionary['data'])
-            gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
-            self.response.write(template.render({'holiName': holiName, 'holiType': holiType, 'holiYName': holiYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
+            if x > 0:
+                gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
+                self.response.write(template.render({'holiName': holiName, 'holiType': holiType, 'holiYName': holiYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
+            else:
+                self.response.write("Kripa stop.")
         else:
             self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="css/owl.jpg"> </img><center><br></body></html>''')
 
@@ -651,6 +655,7 @@ class RandomHandler(webapp2.RequestHandler):
         if randName:
             #search_term = self.request.get('bdName', 'bdAge')
             search_term = "random"
+            search_term= search_term.replace(' ', '+')
             randYName = self.request.get('randYName')
             # Make empty variables for quotes within handlers about here
             quote = None
