@@ -172,7 +172,7 @@ class ConHandler(webapp2.RequestHandler):
                     gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
                     self.redirect('/templates/congrats-card?conName=%s&conCongra=%s&conYName=%s&gif=%s' % (conName, conCongra, conYName, gif_url))
                 else:
-                    self.response.write("Kripa stop.")
+                    self.response.write('''<html><body><center><br><p> Kripa stop. </p><br><a href="/"> Home</a><center><br></body></html>''')
             else:
                 #creation of the random text
                 textRand = random.randint(1, 2)
@@ -357,7 +357,7 @@ class HolidaysHandler(webapp2.RequestHandler):
                     gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
                     self.redirect('/templates/holidays-card?holiName=%s&holiType=%s&holiYName=%s&gif=%s' % (holiName, holiType, holiYName, gif_url))
                 else:
-                    self.response.write("Kripa stop.")
+                    self.response.write('''<html><body><center><br><p> Kripa stop. </p><br><a href="/"> Home</a><center><br></body></html>''')
             else:
                 textRand = random.randint(1, 2)
                 if textRand == 1:
