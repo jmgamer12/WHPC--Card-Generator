@@ -168,19 +168,20 @@ class ConHandler(webapp2.RequestHandler):
                 giphy_json_content = giphy_data_source.content
                 parsed_giphy_dictionary = json.loads(giphy_json_content)
                 x = len(parsed_giphy_dictionary['data'])
-                gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
-                self.redirect('/templates/congrats-card?conName=%s&conCongra=%s&conYName=%s&gif=%s' % (conName, conCongra, conYName, gif_url))
-            # Make empty variables for quotes within handlers about here
-            quote = None
-            quote1 = None
-            #creation of the random text
-            textRand = random.randint(1, 2)
-            if textRand == 1:
-                quote = 'Congratulations ' + conName + ", <br><br>Everyone is so proud of your " + conCongra + '! <br><br><br>Keep up the good work, <br>' + conYName
-            elif textRand == 2:
-                quote1 = conName + ", <br><br>Congratulations on " + conCongra + "! <br><br> I'm so proud of you, <br>" + conYName
-            # The thing above checks if string in birthday name input is empty.
-            self.response.write(template.render({'conName': conName, 'conCongra': conCongra, 'conYName': conYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
+                if x > 0:
+                    gif_url = parsed_giphy_dictionary['data'][random.randint(0, x-1)]['images']['original']['url']
+                    self.redirect('/templates/congrats-card?conName=%s&conCongra=%s&conYName=%s&gif=%s' % (conName, conCongra, conYName, gif_url))
+                else:
+                    self.response.write("Kripa stop.")
+            else:
+                #creation of the random text
+                textRand = random.randint(1, 2)
+                if textRand == 1:
+                    quote = 'Congratulations ' + conName + ", <br><br>Everyone is so proud of your " + conCongra + '! <br><br><br>Keep up the good work, <br>' + conYName
+                elif textRand == 2:
+                    quote1 = conName + ", <br><br>Congratulations on " + conCongra + "! <br><br> I'm so proud of you, <br>" + conYName
+                # The thing above checks if string in birthday name input is empty.
+                self.response.write(template.render({'conName': conName, 'conCongra': conCongra, 'conYName': conYName, 'quote1': quote1, 'quote': quote,'gif_url': gif_url}))
         else:
             self.response.write('''<html><body><center><br><p> To Who? </p><br><img src="/images/owl.jpg"> </img><center><br></body></html>''')
 
